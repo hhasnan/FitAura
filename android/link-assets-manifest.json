@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Urbanist-ExtraBold.ttf",
+      "sha1": "c42b0b5db687f874fe64c762a4e9de2331dc336f"
+    },
+    {
+      "path": "assets/fonts/Urbanist.ttf",
+      "sha1": "d2e596224a2ea7c2c7eb9f6edbb79664d6f3c1da"
+    }
+  ]
+}
