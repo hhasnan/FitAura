@@ -5,6 +5,8 @@ import { SplashLoaderIcon, SplashScreenDumbellIcon } from '../../../assets/icons
 
 
 const Splash = () => {
+
+
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={'#FE632B'}></StatusBar>
