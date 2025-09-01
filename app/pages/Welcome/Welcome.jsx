@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 37,
         color: '#FFFFFF',
-        fontFamily: 'Urbanist-Regular',
+        fontFamily: 'Urbanist',
         fontWeight: 'bold'
     },
     subtitle: {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     },
     paragraph: {
       color: '#FFFFFF',
-      fontFamily: 'Urbanist-Regular',
+      fontFamily: 'Urbanist',
       fontWeight: 'normal',
       fontSize: 14,
       marginTop: 15,

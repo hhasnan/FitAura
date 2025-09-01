@@ -1,13 +1,18 @@
 import { ImageBackground, Pressable, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
+
 
 const OnBoardingOne = ({ activePage, setActivePage, img, title, subtitle }) => {
+
+    const navigation = useNavigation()
+
     return (
         <ImageBackground source={img} style={styles.background}>
             <View style={styles.container}>
                 <StatusBar backgroundColor={'transparent'} translucent />
                 {activePage === 2 ? null : (<View style={{ paddingTop: 50, alignItems: 'flex-end' }}>
-                    <Pressable style={styles.skipbutton}><Text style={styles.skipbuttontext}>Skip</Text></Pressable>
+                    <Pressable style={styles.skipbutton} onPress={() => navigation.navigate('AuthScreen')}><Text style={styles.skipbuttontext}>Skip</Text></Pressable>
                 </View>)}
                 <View style={styles.datacontainer}>
                     <Text style={styles.title}>"{title}"</Text>
@@ -17,12 +22,14 @@ const OnBoardingOne = ({ activePage, setActivePage, img, title, subtitle }) => {
                         <View style={activePage === 1 ? styles.activeCarouselBar : styles.inactiveCarouselBar}></View>
                         <View style={activePage === 2 ? styles.activeCarouselBar : styles.inactiveCarouselBar}></View>
                     </View>
-                    <Pressable style={styles.button} onPress={() => setActivePage(activePage + 1)}>
-                        <Text style={styles.buttonText}>Next</Text>
-                    </Pressable>
-                </View>
+                    <Pressable
+                        style={styles.button} 
+                        onPress={activePage === 2 ? () => navigation.navigate('AuthScreen') : () => setActivePage(activePage + 1)}>
+                    <Text style={styles.buttonText}>{activePage === 2 ? 'Get Started' : 'Next'}</Text>
+                </Pressable>
             </View>
-        </ImageBackground>
+        </View>
+        </ImageBackground >
     )
 }
 
