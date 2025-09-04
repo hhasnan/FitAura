@@ -32,5 +32,17 @@ import LoseWeightImg from './actual-goals-page/lose-weight-img.png'
 import BeginnerLevelImg from './workout-level-page/beginner-level-img.png'
 import IntermediateLevelImg from './workout-level-page/intermediate-level-img.png'
 import AdvancedLevelImg from './workout-level-page/advanced-level-img.png'
+import TickIcon from './tick-icon.svg'
+import DemoCardImg from './demo-card-img.png'
+import MasterCardLogoIcon from './master-card-logo-icon.svg'
+import PlusIcon from './plus-icon.svg'
+import EllipseLoaderIcon from './ellipse-loader-icon.svg'
+import GeneratingLoaderIcon from './generating-loader-icon.svg'
+import HomeBottombaricon from './home-bottombar-icon.svg'
+import BellHomeIcon from './bell-home-icon.svg'
+import HeartHomeIcon from './heart-home-icon.svg'
+import CalendarHomeIcon from './calendar-home-icon.svg'
+import SubtitleHomeScreenIcon from './home-screen-card-img/subtitle-icon.svg'
+import HomeScreenCardImg2 from './home-screen-card-img/home-screen-card-img-2.png'
 
-export { SplashScreenDumbellIcon, SplashLoaderIcon, WelcomeScreenBgImg, OnBoarding1BgImg, OnBoarding2BgImg, OnBoarding3BgImg, AuthGoogleIcon, AuthAppleIcon, AuthfacebookIcon, EmailIcon, LockIcon, HidePasswordIcon, ProfileBarIcon, ForgotPasswordScreenIcon, OtpVerificationScreenIcon, PasswordResetScreenIcon, SuccessfullyResetScreenIcon, MaleGenderCardImg, FemaleGenderCardImg, AbsCardImg, ArmsCardImg, ChestCardImg, FullBodyCardImg, LegsCardImg, ShouldersCardImg, BuildMuscleImg, GainWeightImg, ImproveFlexibilityImg, ImproveOverallFitnessImg, IncreaseEnduranceImg, LoseWeightImg, BeginnerLevelImg, IntermediateLevelImg, AdvancedLevelImg }
+export { SplashScreenDumbellIcon, SplashLoaderIcon, WelcomeScreenBgImg, OnBoarding1BgImg, OnBoarding2BgImg, OnBoarding3BgImg, AuthGoogleIcon, AuthAppleIcon, AuthfacebookIcon, EmailIcon, LockIcon, HidePasswordIcon, ProfileBarIcon, ForgotPasswordScreenIcon, OtpVerificationScreenIcon, PasswordResetScreenIcon, SuccessfullyResetScreenIcon, MaleGenderCardImg, FemaleGenderCardImg, AbsCardImg, ArmsCardImg, ChestCardImg, FullBodyCardImg, LegsCardImg, ShouldersCardImg, BuildMuscleImg, GainWeightImg, ImproveFlexibilityImg, ImproveOverallFitnessImg, IncreaseEnduranceImg, LoseWeightImg, BeginnerLevelImg, IntermediateLevelImg, AdvancedLevelImg, TickIcon, DemoCardImg, MasterCardLogoIcon, PlusIcon, EllipseLoaderIcon, GeneratingLoaderIcon, HomeBottombaricon, BellHomeIcon, HeartHomeIcon, CalendarHomeIcon, SubtitleHomeScreenIcon, HomeScreenCardImg2 }

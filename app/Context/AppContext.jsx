@@ -11,6 +11,10 @@ export const AppProvider = ({ children }) => {
             focusArea: '',
             actualGoal: '',
             workoutLevel: '',
+            weight: '',
+            height: '',
+            subscriptionPlan: '',
+            cardNumber: '',
         }
     });
 

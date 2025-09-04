@@ -38,7 +38,7 @@ const WorkoutLevelScreen = ({ navigation }) => {
                     </Pressable>
                 ))}
             </View>
-            <QuestionnaireButton style={styles.questionnaireButton} title={"Continue"} onPress={() => { workoutLevel === '' ? alert("Please select your workout level") : (updateData('workoutLevel', workoutLevel),console.log(userData) ,navigation.navigate('FocusAreaScreen')) }} />
+            <QuestionnaireButton style={styles.questionnaireButton} title={"Continue"} onPress={() => { workoutLevel === '' ? alert("Please select your workout level") : (updateData('workoutLevel', workoutLevel),console.log(userData) ,navigation.navigate('BMIScreen')) }} />
         </View>
     )
 }

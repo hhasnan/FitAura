@@ -16,6 +16,11 @@ import FocusAreaScreen from "../pages/FocuseAreaScreen";
 import ActualGoalScreen from "../pages/ActualGoalScreen";
 import WorkoutLevelScreen from "../pages/WorkoutLevelScreen";
 import BMIScreen from "../pages/BMIScreen";
+import SubscriptionScreen from "../pages/SubscrptionScreen";
+import CardInformationScreen from "../pages/CardInformationScreen";
+import AddScreenScreen from "../pages/AddCardScreen";
+import ReviewSubscriptionScreen from "../pages/ReviewSubscriptionScreen";
+import GeneratingPlanScreen from "../pages/GeneratingPlanScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -44,7 +49,7 @@ const StackNavigator = () => {
 
     return (
         <AppProvider>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="BMIScreen">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="MainTabs">
                 {splash && <Stack.Screen name="Splash" component={Splash} />}
                 {welcome && <Stack.Screen name="Welcome" component={Welcome} />}
                 <Stack.Screen name="OnboardingScreen" component={OnBoardingScreen} />
@@ -58,6 +63,11 @@ const StackNavigator = () => {
                 <Stack.Screen name="ActualGoalScreen" component={ActualGoalScreen} />
                 <Stack.Screen name="WorkoutLevelScreen" component={WorkoutLevelScreen} />
                 <Stack.Screen name="BMIScreen" component={BMIScreen} />
+                <Stack.Screen name="SubscriptionScreen" component={SubscriptionScreen} />
+                <Stack.Screen name="CardInformationScreen" component={CardInformationScreen} />
+                <Stack.Screen name="AddCardScreen" component={AddScreenScreen} />
+                <Stack.Screen name="ReviewSubscriptionScreen" component={ReviewSubscriptionScreen} />
+                <Stack.Screen name="GeneratingPlanScreen" component={GeneratingPlanScreen} />
                 <Stack.Screen name="MainTabs" component={TabNavigator} />
             </Stack.Navigator>
         </AppProvider>

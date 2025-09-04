@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         height: 90,
         borderTopColor: '#242323',
         borderTopWidth: 2,
+        backgroundColor: '#181717',
     },
     button: {
         flex: 1,

@@ -1,0 +1,69 @@
+import { StatusBar, StyleSheet, Text, View } from 'react-native'
+import React, { useEffect } from 'react'
+import { GeneratingLoaderIcon } from '../../../assets/icons'
+
+const GeneratingPlanScreen = ({ navigation }) => {
+
+
+    useEffect(() => {
+        setInterval(() => {
+            navigation.navigate('MainTabs');
+        }, 5000);
+    }, [])
+
+    return (
+        <View style={styles.container}>
+            <StatusBar barStyle="light-content" backgroundColor="#181717" translucent />
+            <View>
+                <Text style={styles.title}>Generating Your Workout Plan</Text>
+                <Text style={styles.subtitle}>Please wait....</Text>
+            </View>
+            <GeneratingLoaderIcon style={styles.icon}/>
+            <Text style={styles.belowsidetitle}>This will just take a moment to generating your workouts plan.</Text>
+        </View>
+    )
+}
+
+export default GeneratingPlanScreen
+
+const styles = StyleSheet.create({
+    container: {
+        width: '100%',
+        height: '100%',
+        backgroundColor: '#181717',
+        paddingHorizontal: 20,
+        position: 'relative',
+        paddingVertical: 40,
+        alignItems: 'center',
+    },
+    title: {
+        fontSize: 19,
+        fontWeight: 'bold',
+        color: 'white',
+        fontFamily: 'Urbanist',
+        paddingTop: 15,
+        textAlign: 'center'
+    },
+    subtitle: {
+        fontSize: 16,
+        fontWeight: 'regular',
+        color: '#C3C3C3',
+        fontFamily: 'Urbanist',
+        paddingTop: 5,
+        textAlign: 'center'
+    },
+    icon: {
+        marginTop: 157,
+        alignSelf: 'center'
+    },
+    belowsidetitle: {
+        fontSize: 15,
+        fontWeight: 'regular',
+        color: '#C3C3C3',
+        fontFamily: 'Urbanist',
+        paddingTop: 5,
+        textAlign: 'center',
+        marginTop: 'auto',
+        marginBottom: 30
+    }
+})
