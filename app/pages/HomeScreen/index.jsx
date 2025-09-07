@@ -1,9 +1,11 @@
-import { ImageBackground, Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { FlatList, ImageBackground, Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { BellHomeIcon, CalendarHomeIcon, HeartHomeIcon, HomeScreenCardImg2, SubtitleHomeScreenIcon } from '../../../assets/icons'
+import { BellHomeIcon, CalendarHomeIcon, HeartHomeIcon, HomeScreenCardImg2, HomeScreenCardImgTwo, LockSessionHomeScreenIcon, SubtitleHomeScreenIcon, UnlockSessionHomeScreenIcon } from '../../../assets/icons'
+import { useNavigation } from '@react-navigation/native'
 
 const HomeScreen = () => {
 
+  const navigation = useNavigation()
   const date = new Date();
   const month = date.toLocaleDateString('en-US', { month: 'short' });
 
@@ -30,6 +32,13 @@ const HomeScreen = () => {
   const dates = getDates(8);
   const finishedArr = dates.slice(1);
 
+  const data = [
+    { id: 1, title: 'Week 1: Muscle Group Split', subtitle: ' Beginner / 5 Set', active: true },
+    { id: 2, title: 'Week 2: Bodybuilder Split', subtitle: ' Beginner / 5 Set', active: false },
+    { id: 3, title: 'Week 3: Upper/Lower Body', subtitle: ' Beginner / 5 Set', active: false },
+    { id: 4, title: 'Week 4: Push/Pull/Legs', subtitle: ' Beginner / 5 Set', active: false },
+  ]
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#181717" translucent />
@@ -43,7 +52,7 @@ const HomeScreen = () => {
             <Pressable>
               <HeartHomeIcon />
             </Pressable>
-            <Pressable>
+            <Pressable onPress={() => navigation.navigate('Notification')}>
               <BellHomeIcon />
             </Pressable>
           </View>
@@ -60,7 +69,7 @@ const HomeScreen = () => {
           <View style={styles.datecardcontainer}>
             {finishedArr.map((date, index) => {
               return (
-                <View style={[styles.datecard, { backgroundColor: date.istoday ? '#FE632B' : '#202125', width: date.istoday ? 57 : 50 , height: date.istoday ? 80 : 70 }]} key={index}>
+                <View style={[styles.datecard, { backgroundColor: date.istoday ? '#FE632B' : '#202125', width: date.istoday ? 57 : 50, height: date.istoday ? 80 : 70 }]} key={index}>
                   <Text style={styles.datetext}>{date.date}</Text>
                   <Text style={styles.daytext}>{date.day}</Text>
                 </View>
@@ -69,22 +78,33 @@ const HomeScreen = () => {
           </View>
         </ScrollView>
       </View>
-      <View style={styles.containerpadding}>
+      <View style={styles.containerpaddingflex}>
         <View style={styles.workouttopcontainer}>
           <Text style={styles.workoutactivitytitle}>Workout activity</Text>
           <Pressable><Text style={styles.workoutcontainerbuttontext}>see all</Text></Pressable>
         </View>
-        <ScrollView style={styles.workoutactivityscrollview}>
-          <ImageBackground source={<HomeScreenCardImg2/>} style={styles.workoutactivitycard}>
-            <View style={styles.workoutactivitycardstyling}>
-              <Text style={styles.workoutactivitycardstyling}>Week 1: Muscle Group Split</Text>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <SubtitleHomeScreenIcon/>
-                <Text style={styles.workoutactivitycardstyling}> Beginner / 5 Set</Text>
-              </View>
+        <FlatList
+          data={data}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <View style={styles.activitycardoutside}>
+              <ImageBackground style={styles.workoutactivitycard} source={HomeScreenCardImgTwo}>
+                <View style={[styles.activitycardinside, {backgroundColor: item.active ? 'transparent' : '#00000059'}]}>
+                  <Text style={styles.workoutactivitycardtitle}>{item.title}</Text>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 3 }}>
+                    <SubtitleHomeScreenIcon />
+                    <Text style={styles.workoutactivitycardsubtitle}> {item.subtitle}</Text>
+                  </View>
+                  <Pressable style={[styles.cardbutton, { backgroundColor: item.active ? '#FE632B' : '#FE632B73' }]}>
+                    <Text style={styles.carbbuttontext}>Start Session</Text>
+                    {item.active === true ? <UnlockSessionHomeScreenIcon /> : <LockSessionHomeScreenIcon />}
+                  </Pressable>
+                </View>
+              </ImageBackground>
             </View>
-          </ImageBackground>
-        </ScrollView>
+          )}
+          showsVerticalScrollIndicator={false}
+        />
       </View>
     </View>
   )
@@ -102,6 +122,10 @@ const styles = StyleSheet.create({
   },
   containerpadding: {
     paddingHorizontal: 20
+  },
+  containerpaddingflex: {
+    paddingHorizontal: 20,
+    flex: 1
   },
   topbarcontainer: {
     flexDirection: 'row',
@@ -169,7 +193,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 24,
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
+    marginBottom: 12
   },
   workoutactivitytitle: {
     fontSize: 20,
@@ -182,5 +207,46 @@ const styles = StyleSheet.create({
     fontWeight: 500,
     color: '#FE632B',
     fontFamily: 'Urbanist'
+  },
+  activitycardinside: {
+    height: 140,
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+  },
+  activitycardoutside: {
+    marginBottom: 10,
+    borderRadius: 10,
+    overflow: 'hidden'
+  },
+  workoutactivitycard: {
+    borderRadius: 10
+  },
+  workoutactivitycardtitle: {
+    fontSize: 15,
+    fontWeight: 600,
+    color: 'white'
+  },
+  workoutactivitycardsubtitle: {
+    fontSize: 12,
+    fontWeight: 600,
+    color: 'white',
+    marginStart: 5
+  },
+  cardbutton: {
+    height: 32,
+    borderRadius: 6,
+    backgroundColor: '#FE632B',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginTop: 'auto',
+    marginBottom: 5
+  },
+  carbbuttontext: {
+    fontSize: 13,
+    fontWeight: 'semibold',
+    color: 'white',
+    marginEnd: 3
   }
 })

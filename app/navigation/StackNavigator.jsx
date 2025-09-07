@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNavigator from "./TabNavigator";
 import { useEffect, useState } from "react";
-import { useNavigation } from "@react-navigation/native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import Splash from "../pages/Splash/Splash";
 import Welcome from "../pages/Welcome/Welcome";
 import OnBoardingScreen from "../pages/OnBoardingScreen/Index";
@@ -21,6 +21,8 @@ import CardInformationScreen from "../pages/CardInformationScreen";
 import AddScreenScreen from "../pages/AddCardScreen";
 import ReviewSubscriptionScreen from "../pages/ReviewSubscriptionScreen";
 import GeneratingPlanScreen from "../pages/GeneratingPlanScreen";
+import NotificationScreen from "../pages/NotificationScreen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const Stack = createNativeStackNavigator();
 
@@ -49,7 +51,7 @@ const StackNavigator = () => {
 
     return (
         <AppProvider>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="MainTabs">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Notification">
                 {splash && <Stack.Screen name="Splash" component={Splash} />}
                 {welcome && <Stack.Screen name="Welcome" component={Welcome} />}
                 <Stack.Screen name="OnboardingScreen" component={OnBoardingScreen} />
@@ -68,6 +70,7 @@ const StackNavigator = () => {
                 <Stack.Screen name="AddCardScreen" component={AddScreenScreen} />
                 <Stack.Screen name="ReviewSubscriptionScreen" component={ReviewSubscriptionScreen} />
                 <Stack.Screen name="GeneratingPlanScreen" component={GeneratingPlanScreen} />
+                <Stack.Screen name="Notification" component={NotificationScreen} options={{ headerShown: true, headerStyle: {backgroundColor: 'transparent', elevation: 0, shadowColor: 'transparent' }, headerTintColor: '#fff' }}  />
                 <Stack.Screen name="MainTabs" component={TabNavigator} />
             </Stack.Navigator>
         </AppProvider>

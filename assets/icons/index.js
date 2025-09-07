@@ -43,6 +43,10 @@ import BellHomeIcon from './bell-home-icon.svg'
 import HeartHomeIcon from './heart-home-icon.svg'
 import CalendarHomeIcon from './calendar-home-icon.svg'
 import SubtitleHomeScreenIcon from './home-screen-card-img/subtitle-icon.svg'
-import HomeScreenCardImg2 from './home-screen-card-img/home-screen-card-img-2.png'
+import HomeScreenCardImgTwo from './home-screen-card-img/home-screen-card-img-2.png'
+import LockSessionHomeScreenIcon from './home-screen-card-img/lock-session-home-screen-icon.svg'
+import UnlockSessionHomeScreenIcon from './home-screen-card-img/unlock-session-home-screen-icon.svg'
 
-export { SplashScreenDumbellIcon, SplashLoaderIcon, WelcomeScreenBgImg, OnBoarding1BgImg, OnBoarding2BgImg, OnBoarding3BgImg, AuthGoogleIcon, AuthAppleIcon, AuthfacebookIcon, EmailIcon, LockIcon, HidePasswordIcon, ProfileBarIcon, ForgotPasswordScreenIcon, OtpVerificationScreenIcon, PasswordResetScreenIcon, SuccessfullyResetScreenIcon, MaleGenderCardImg, FemaleGenderCardImg, AbsCardImg, ArmsCardImg, ChestCardImg, FullBodyCardImg, LegsCardImg, ShouldersCardImg, BuildMuscleImg, GainWeightImg, ImproveFlexibilityImg, ImproveOverallFitnessImg, IncreaseEnduranceImg, LoseWeightImg, BeginnerLevelImg, IntermediateLevelImg, AdvancedLevelImg, TickIcon, DemoCardImg, MasterCardLogoIcon, PlusIcon, EllipseLoaderIcon, GeneratingLoaderIcon, HomeBottombaricon, BellHomeIcon, HeartHomeIcon, CalendarHomeIcon, SubtitleHomeScreenIcon, HomeScreenCardImg2 }
+export {
+    SplashScreenDumbellIcon, SplashLoaderIcon, WelcomeScreenBgImg, OnBoarding1BgImg, OnBoarding2BgImg, OnBoarding3BgImg, AuthGoogleIcon, AuthAppleIcon, AuthfacebookIcon, EmailIcon, LockIcon, HidePasswordIcon, ProfileBarIcon, ForgotPasswordScreenIcon, OtpVerificationScreenIcon, PasswordResetScreenIcon, SuccessfullyResetScreenIcon, MaleGenderCardImg, FemaleGenderCardImg, AbsCardImg, ArmsCardImg, ChestCardImg, FullBodyCardImg, LegsCardImg, ShouldersCardImg, BuildMuscleImg, GainWeightImg, ImproveFlexibilityImg, ImproveOverallFitnessImg, IncreaseEnduranceImg, LoseWeightImg, BeginnerLevelImg, IntermediateLevelImg, AdvancedLevelImg, TickIcon, DemoCardImg, MasterCardLogoIcon, PlusIcon, EllipseLoaderIcon, GeneratingLoaderIcon, HomeBottombaricon, BellHomeIcon, HeartHomeIcon, CalendarHomeIcon, SubtitleHomeScreenIcon, LockSessionHomeScreenIcon, UnlockSessionHomeScreenIcon, HomeScreenCardImgTwo
+}
