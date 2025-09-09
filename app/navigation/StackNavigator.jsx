@@ -22,7 +22,8 @@ import AddScreenScreen from "../pages/AddCardScreen";
 import ReviewSubscriptionScreen from "../pages/ReviewSubscriptionScreen";
 import GeneratingPlanScreen from "../pages/GeneratingPlanScreen";
 import NotificationScreen from "../pages/NotificationScreen";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import BookmarkScreen from "../pages/BookmarkScreen";
+import SessionDetailScreen from "../pages/SessionDetailScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -51,7 +52,7 @@ const StackNavigator = () => {
 
     return (
         <AppProvider>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Notification">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="MainTabs">
                 {splash && <Stack.Screen name="Splash" component={Splash} />}
                 {welcome && <Stack.Screen name="Welcome" component={Welcome} />}
                 <Stack.Screen name="OnboardingScreen" component={OnBoardingScreen} />
@@ -70,7 +71,11 @@ const StackNavigator = () => {
                 <Stack.Screen name="AddCardScreen" component={AddScreenScreen} />
                 <Stack.Screen name="ReviewSubscriptionScreen" component={ReviewSubscriptionScreen} />
                 <Stack.Screen name="GeneratingPlanScreen" component={GeneratingPlanScreen} />
-                <Stack.Screen name="Notification" component={NotificationScreen} options={{ headerShown: true, headerStyle: {backgroundColor: 'transparent', elevation: 0, shadowColor: 'transparent' }, headerTintColor: '#fff' }}  />
+                <Stack.Screen name="Notification" component={NotificationScreen} 
+                // options={{ headerShown: true, headerStyle: {backgroundColor: '#181717', elevation: 0, shadowColor: 'transparent', }, headerTintColor: '#fff'}}  
+                />
+                <Stack.Screen name="BookmarkScreen" component={BookmarkScreen} />
+                <Stack.Screen name="SessionDetailsScreen" component={SessionDetailScreen} />
                 <Stack.Screen name="MainTabs" component={TabNavigator} />
             </Stack.Navigator>
         </AppProvider>

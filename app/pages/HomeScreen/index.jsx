@@ -1,6 +1,6 @@
 import { FlatList, ImageBackground, Pressable, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { BellHomeIcon, CalendarHomeIcon, HeartHomeIcon, HomeScreenCardImg2, HomeScreenCardImgTwo, LockSessionHomeScreenIcon, SubtitleHomeScreenIcon, UnlockSessionHomeScreenIcon } from '../../../assets/icons'
+import { BellHomeIcon, CalendarHomeIcon, HeartHomeIcon, HomeScreenCardImg2, HomeScreenCardImgOne, HomeScreenCardImgThree, HomeScreenCardImgTwo, LockSessionHomeScreenIcon, SubtitleHomeScreenIcon, UnlockSessionHomeScreenIcon } from '../../../assets/icons'
 import { useNavigation } from '@react-navigation/native'
 
 const HomeScreen = () => {
@@ -33,10 +33,10 @@ const HomeScreen = () => {
   const finishedArr = dates.slice(1);
 
   const data = [
-    { id: 1, title: 'Week 1: Muscle Group Split', subtitle: ' Beginner / 5 Set', active: true },
-    { id: 2, title: 'Week 2: Bodybuilder Split', subtitle: ' Beginner / 5 Set', active: false },
-    { id: 3, title: 'Week 3: Upper/Lower Body', subtitle: ' Beginner / 5 Set', active: false },
-    { id: 4, title: 'Week 4: Push/Pull/Legs', subtitle: ' Beginner / 5 Set', active: false },
+    { id: 1, title: 'Week 1: Muscle Group Split', subtitle: ' Beginner / 5 Set', bgimg : HomeScreenCardImgOne, active: true },
+    { id: 2, title: 'Week 2: Bodybuilder Split', subtitle: ' Beginner / 5 Set', bgimg : HomeScreenCardImgTwo, active: false },
+    { id: 3, title: 'Week 3: Upper/Lower Body', subtitle: ' Beginner / 5 Set', bgimg : HomeScreenCardImgThree, active: false },
+    { id: 4, title: 'Week 4: Push/Pull/Legs', subtitle: ' Beginner / 5 Set', bgimg : HomeScreenCardImgTwo, active: false },
   ]
 
   return (
@@ -50,7 +50,7 @@ const HomeScreen = () => {
           </View>
           <View style={styles.iconContainer}>
             <Pressable>
-              <HeartHomeIcon />
+              <HeartHomeIcon onPress={() => navigation.navigate('BookmarkScreen')}/>
             </Pressable>
             <Pressable onPress={() => navigation.navigate('Notification')}>
               <BellHomeIcon />
@@ -88,14 +88,14 @@ const HomeScreen = () => {
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <View style={styles.activitycardoutside}>
-              <ImageBackground style={styles.workoutactivitycard} source={HomeScreenCardImgTwo}>
+              <ImageBackground style={styles.workoutactivitycard} source={item.bgimg}>
                 <View style={[styles.activitycardinside, {backgroundColor: item.active ? 'transparent' : '#00000059'}]}>
                   <Text style={styles.workoutactivitycardtitle}>{item.title}</Text>
                   <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 3 }}>
                     <SubtitleHomeScreenIcon />
                     <Text style={styles.workoutactivitycardsubtitle}> {item.subtitle}</Text>
                   </View>
-                  <Pressable style={[styles.cardbutton, { backgroundColor: item.active ? '#FE632B' : '#FE632B73' }]}>
+                  <Pressable onPress={() => item.active === true && navigation.navigate('SessionDetailsScreen')} style={[styles.cardbutton, { backgroundColor: item.active ? '#FE632B' : '#FE632B73' }]}>
                     <Text style={styles.carbbuttontext}>Start Session</Text>
                     {item.active === true ? <UnlockSessionHomeScreenIcon /> : <LockSessionHomeScreenIcon />}
                   </Pressable>

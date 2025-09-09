@@ -43,10 +43,18 @@ import BellHomeIcon from './bell-home-icon.svg'
 import HeartHomeIcon from './heart-home-icon.svg'
 import CalendarHomeIcon from './calendar-home-icon.svg'
 import SubtitleHomeScreenIcon from './home-screen-card-img/subtitle-icon.svg'
+import HomeScreenCardImgOne from './home-screen-card-img/home-screen-card-img-1.png'
 import HomeScreenCardImgTwo from './home-screen-card-img/home-screen-card-img-2.png'
+import HomeScreenCardImgThree from './home-screen-card-img/home-screen-card-img-3.png'
 import LockSessionHomeScreenIcon from './home-screen-card-img/lock-session-home-screen-icon.svg'
 import UnlockSessionHomeScreenIcon from './home-screen-card-img/unlock-session-home-screen-icon.svg'
+import NotificationScreenIcon from './notification-screen-icon.svg'
+import BackArrowIcon from './back-arrow-icon.svg'
+import SessionDetailsScreenBg from './Session-details-screen-bg.png'
+import ClockSessionScreenIcon from './session-detail/clock-session-screen-icon.svg'
+import FireSessionScreenIcon from './session-detail/fire-session-screen-icon.svg'
+import HDumbellSessionScreenIcon from './session-detail/hdumbell-session-screen-icon.svg'
 
 export {
-    SplashScreenDumbellIcon, SplashLoaderIcon, WelcomeScreenBgImg, OnBoarding1BgImg, OnBoarding2BgImg, OnBoarding3BgImg, AuthGoogleIcon, AuthAppleIcon, AuthfacebookIcon, EmailIcon, LockIcon, HidePasswordIcon, ProfileBarIcon, ForgotPasswordScreenIcon, OtpVerificationScreenIcon, PasswordResetScreenIcon, SuccessfullyResetScreenIcon, MaleGenderCardImg, FemaleGenderCardImg, AbsCardImg, ArmsCardImg, ChestCardImg, FullBodyCardImg, LegsCardImg, ShouldersCardImg, BuildMuscleImg, GainWeightImg, ImproveFlexibilityImg, ImproveOverallFitnessImg, IncreaseEnduranceImg, LoseWeightImg, BeginnerLevelImg, IntermediateLevelImg, AdvancedLevelImg, TickIcon, DemoCardImg, MasterCardLogoIcon, PlusIcon, EllipseLoaderIcon, GeneratingLoaderIcon, HomeBottombaricon, BellHomeIcon, HeartHomeIcon, CalendarHomeIcon, SubtitleHomeScreenIcon, LockSessionHomeScreenIcon, UnlockSessionHomeScreenIcon, HomeScreenCardImgTwo
+    SplashScreenDumbellIcon, SplashLoaderIcon, WelcomeScreenBgImg, OnBoarding1BgImg, OnBoarding2BgImg, OnBoarding3BgImg, AuthGoogleIcon, AuthAppleIcon, AuthfacebookIcon, EmailIcon, LockIcon, HidePasswordIcon, ProfileBarIcon, ForgotPasswordScreenIcon, OtpVerificationScreenIcon, PasswordResetScreenIcon, SuccessfullyResetScreenIcon, MaleGenderCardImg, FemaleGenderCardImg, AbsCardImg, ArmsCardImg, ChestCardImg, FullBodyCardImg, LegsCardImg, ShouldersCardImg, BuildMuscleImg, GainWeightImg, ImproveFlexibilityImg, ImproveOverallFitnessImg, IncreaseEnduranceImg, LoseWeightImg, BeginnerLevelImg, IntermediateLevelImg, AdvancedLevelImg, TickIcon, DemoCardImg, MasterCardLogoIcon, PlusIcon, EllipseLoaderIcon, GeneratingLoaderIcon, HomeBottombaricon, BellHomeIcon, HeartHomeIcon, CalendarHomeIcon, SubtitleHomeScreenIcon, LockSessionHomeScreenIcon, UnlockSessionHomeScreenIcon, HomeScreenCardImgOne, HomeScreenCardImgTwo, HomeScreenCardImgThree, NotificationScreenIcon, BackArrowIcon, SessionDetailsScreenBg, ClockSessionScreenIcon, FireSessionScreenIcon, HDumbellSessionScreenIcon
 }
