@@ -61,7 +61,7 @@ const HomeScreen = () => {
           <Pressable>
             <Text style={styles.calendertext}>{month}, {date.getFullYear()}</Text>
           </Pressable>
-          <CalendarHomeIcon />
+          <Pressable onPress={() => navigation.navigate('CalendarScreen')}><CalendarHomeIcon /></Pressable>
         </View>
       </View>
       <View style={{ position: 'relative', height: 80 }}>

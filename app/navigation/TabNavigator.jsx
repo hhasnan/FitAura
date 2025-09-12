@@ -1,6 +1,9 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { HistoryBottombarIcon, HomeBottombaricon, ProfileBottombarIcon, ReportBottomIcon } from "../../assets/icons";
 import HomeScreen from "../pages/HomeScreen";
-import { HomeBottombaricon } from "../../assets/icons";
+import ReportScreen from "../pages/ReportScreen";
+import HistoryScreen from "../pages/HistoryScreen";
+import ProfileScreen from "../pages/ProfileScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +33,33 @@ const MyTabs = () => (
             options={{
                 tabBarIcon: ({ color }) => (
                     <HomeBottombaricon fill={color} width={28} height={28} />
+                )
+            }}
+        />
+        <Tab.Screen
+            name="Report"
+            component={ReportScreen}
+            options={{
+                tabBarIcon: ({ color }) => (
+                    <ReportBottomIcon fill={color} width={28} height={28} />
+                )
+            }}
+        />
+        <Tab.Screen
+            name='History'
+            component={HistoryScreen}
+            options={{
+                tabBarIcon: ({color}) => (
+                    <HistoryBottombarIcon fill={color} width={28} height={28}/>
+                )
+            }}
+        />
+        <Tab.Screen
+            name='Profile'
+            component={ProfileScreen}
+            options={{
+                tabBarIcon: ({color}) => (
+                    <ProfileBottombarIcon fill={color} width={28} height={28}/>
                 )
             }}
         />

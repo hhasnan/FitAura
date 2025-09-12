@@ -24,6 +24,13 @@ import GeneratingPlanScreen from "../pages/GeneratingPlanScreen";
 import NotificationScreen from "../pages/NotificationScreen";
 import BookmarkScreen from "../pages/BookmarkScreen";
 import SessionDetailScreen from "../pages/SessionDetailScreen";
+import WeeklyWorkoutsScreen from "../pages/WeeklyWorkoutsScreen";
+import WorkoutDemoScreen from "../pages/WorkoutDemoScreen";
+import ExcerciseVideoScreen from "../pages/ExcerciseVideoScreen";
+import RestartExcerciseScreen from "../pages/RestartExcerciseScreen";
+import CalendarScreen from "../pages/CalendarScreen";
+import FAQScreen from "../pages/FAQScreen";
+import AboutUsScreen from "../pages/AboutUsScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -76,6 +83,13 @@ const StackNavigator = () => {
                 />
                 <Stack.Screen name="BookmarkScreen" component={BookmarkScreen} />
                 <Stack.Screen name="SessionDetailsScreen" component={SessionDetailScreen} />
+                <Stack.Screen name="WeeklyWorkoutsScreen" component={WeeklyWorkoutsScreen} />
+                <Stack.Screen name="WorkoutDemoScreen" component={WorkoutDemoScreen} />
+                <Stack.Screen name="ExcerciseVideoScreen" component={ExcerciseVideoScreen} />
+                <Stack.Screen name="RestartExcerciseScreen" component={RestartExcerciseScreen} />
+                <Stack.Screen name="CalendarScreen" component={CalendarScreen} />
+                <Stack.Screen name="FAQScreen" component={FAQScreen} />
+                <Stack.Screen name="AboutUsScreen" component={AboutUsScreen} />
                 <Stack.Screen name="MainTabs" component={TabNavigator} />
             </Stack.Navigator>
         </AppProvider>
