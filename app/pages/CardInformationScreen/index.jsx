@@ -3,13 +3,16 @@ import React, { useContext, useState } from 'react'
 import { DemoCardImg } from '../../../assets/icons'
 import QuestionnaireButton from '../../components/QuestionnaireButton';
 import { AppContext } from '../../Context/AppContext';
+import { useNavigation } from '@react-navigation/native';
 
-const CardInformationScreen = ({navigation}) => {
+const CardInformationScreen = ({route}) => {
 
+    const { page } = route.params || {}
+    const navigation = useNavigation()
     const { userData, updateData } = useContext(AppContext);
     const [value, setValue] = useState("");
 
-    const handleChange = (text) => {
+    const handlechange = (text) => {
         // remove all spaces first
         let newText = text.replace(/\s/g, "");
 
@@ -35,7 +38,7 @@ const CardInformationScreen = ({navigation}) => {
                         <Text style={styles.inputLabel}>Name On Card</Text>
                         <TextInput style={styles.input} placeholder="Enter Name On Card" placeholderTextColor="#888" />
                         <Text style={styles.inputLabel}>Card Number</Text>
-                        <TextInput style={styles.input} placeholder="Enter Card Number" placeholderTextColor="#888" value={value} onChangeText={handleChange} keyboardType="numeric" maxLength={19} />
+                        <TextInput style={styles.input} placeholder="Enter Card Number" placeholderTextColor="#888" value={value} onChangeText={handlechange} keyboardType="numeric" maxLength={19} />
                         <View style={styles.expiryContainer}>
                             <View style={styles.smallInputcontainer}>
                                 <Text style={styles.inputLabel}>Exp Date</Text>
@@ -49,7 +52,7 @@ const CardInformationScreen = ({navigation}) => {
                     </View>
                 </ScrollView>
             </KeyboardAvoidingView>
-            <QuestionnaireButton title="Add Card" buttonPosition="relative" onPress={() => { navigation.navigate('AddCardScreen'); updateData('cardNumber', value); console.log(userData.aboutData.cardNumber) }} />
+            <QuestionnaireButton title="Add Card" buttonPosition="relative" onPress={() => { navigation.navigate('AddCardScreen', {page: page}); updateData('cardNumber', value); console.log(userData.aboutData.cardNumber) }} />
         </View>
     )
 }

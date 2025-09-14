@@ -31,6 +31,10 @@ import RestartExcerciseScreen from "../pages/RestartExcerciseScreen";
 import CalendarScreen from "../pages/CalendarScreen";
 import FAQScreen from "../pages/FAQScreen";
 import AboutUsScreen from "../pages/AboutUsScreen";
+import SettingScreen from "../pages/SettingScreen";
+import ChangeWorkoutPlanScreen from "../pages/ChangeWorkoutPlanScreen";
+import CurrentPlanScreen from "../pages/CurrentPlanScreen";
+import UpgradePlanScreen from "../pages/UpgradePlanScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -40,26 +44,26 @@ const StackNavigator = () => {
     const [splash, setSplash] = useState(true)
     const [welcome, setWelcome] = useState(true)
 
-    // useEffect(() => {
-    //     const splashTimer = setTimeout(() => {
-    //         navigation.navigate('Welcome');
-    //         setSplash(false)
-    //     }, 3000);
+    useEffect(() => {
+        const splashTimer = setTimeout(() => {
+            navigation.navigate('Welcome');
+            setSplash(false)
+        }, 3000);
 
-    //     const onboardingTimer = setTimeout(() => {
-    //         navigation.navigate('OnboardingScreen');
-    //         setWelcome(false)
-    //     }, 6000);
+        const onboardingTimer = setTimeout(() => {
+            navigation.navigate('OnboardingScreen');
+            setWelcome(false)
+        }, 6000);
 
-    //     return () => {
-    //         clearTimeout(splashTimer);
-    //         clearTimeout(onboardingTimer);
-    //     };
-    // }, []);
+        return () => {
+            clearTimeout(splashTimer);
+            clearTimeout(onboardingTimer);
+        };
+    }, []);
 
     return (
         <AppProvider>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="MainTabs">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Splash">
                 {splash && <Stack.Screen name="Splash" component={Splash} />}
                 {welcome && <Stack.Screen name="Welcome" component={Welcome} />}
                 <Stack.Screen name="OnboardingScreen" component={OnBoardingScreen} />
@@ -90,6 +94,10 @@ const StackNavigator = () => {
                 <Stack.Screen name="CalendarScreen" component={CalendarScreen} />
                 <Stack.Screen name="FAQScreen" component={FAQScreen} />
                 <Stack.Screen name="AboutUsScreen" component={AboutUsScreen} />
+                <Stack.Screen name="SettingScreen" component={SettingScreen} />
+                <Stack.Screen name="ChangeWorkoutPlanScreen" component={ChangeWorkoutPlanScreen} />
+                <Stack.Screen name="CurrentPlanScreen" component={CurrentPlanScreen} />
+                <Stack.Screen name="UpgradePlanScreen" component={UpgradePlanScreen} />
                 <Stack.Screen name="MainTabs" component={TabNavigator} />
             </Stack.Navigator>
         </AppProvider>

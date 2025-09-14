@@ -6,25 +6,25 @@ const FeatureCard = ({ monthlyPlan }) => {
 
     const data = ['Ad-free experience', 'Unlimited goals: Set and manage an unlimited number of goals', 'Advanced habit and task tracking features', 'Customizable goal templates', 'Advanced AI-powered features', 'Priority customer support']
 
-  return (
-    <View style={styles.featurecontainer}>
-                <View style={[styles.discounttag, {display: monthlyPlan ? 'none' : 'flex' }]}>
-                    <Text style={styles.discounttagtext}>SAVE 17%</Text>
-                </View>
-                <View style={styles.featuretitle}>
-                    <Text style={styles.featuretitletext}>FitAura Premium</Text>
-                    <Text style={styles.featurepackagetext}>{monthlyPlan ? '$4.99' : '$49.99'}<Text style={styles.featurepackagetext1}>/Monthly</Text></Text>
-                </View>
-                <View style={styles.servicescontainer}>
-                    {data.map((item, index) => (
-                        <View style={styles.service} key={index}>
-                            <TickIcon />
-                            <Text style={styles.servicetext}>{item}</Text>
-                        </View>
-                    ))}
-                </View>
+    return (
+        <View style={styles.featurecontainer}>
+            <View style={[styles.discounttag, { display: monthlyPlan ? 'none' : 'flex' }]}>
+                <Text style={styles.discounttagtext}>SAVE 17%</Text>
             </View>
-  )
+            <View style={styles.featuretitle}>
+                <Text style={styles.featuretitletext}>FitAura Premium</Text>
+                <Text style={styles.featurepackagetext}>{monthlyPlan ? '$4.99' : '$49.99'}<Text style={styles.featurepackagetext1}>/Monthly</Text></Text>
+            </View>
+            <View style={styles.servicescontainer}>
+                {data.map((item, index) => (
+                    <View style={styles.service} key={index}>
+                        <TickIcon />
+                        <Text style={styles.servicetext}>{item}</Text>
+                    </View>
+                ))}
+            </View>
+        </View>
+    )
 }
 
 export default FeatureCard

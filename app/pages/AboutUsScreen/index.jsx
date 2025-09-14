@@ -22,7 +22,7 @@ const AboutUsScreen = () => {
             </Text>
             <Text style={styles.textone}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros ante.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros ante.Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et eros ante.Lorem ipsum dolor sit amet
             </Text>
         </View>
     )
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     },
     textone: {
         color: '#FFFFFF',
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: 400,
         fontFamily: 'Urbanist',
     }

@@ -3,9 +3,10 @@ import React, { useContext } from 'react'
 import { MasterCardLogoIcon, PlusIcon } from '../../../assets/icons'
 import QuestionnaireButton from '../../components/QuestionnaireButton'
 import { AppContext } from '../../Context/AppContext'
+import { useNavigation } from '@react-navigation/native'
 
-const AddScreenScreen = ({ navigation }) => {
-
+const AddScreenScreen = () => {
+    const navigation = useNavigation()
     const { userData } = useContext(AppContext);
     const value = userData.aboutData.cardNumber.slice(-4);
 

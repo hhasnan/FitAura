@@ -19,11 +19,11 @@ const ProfileScreen = () => {
       <Text style={styles.textone}>Andrew Ainsley</Text>
       <Text style={styles.texttwo}>@andrewainsleygmail.com</Text>
       <View style={styles.nextpagedivscontainer}>
-        <Pressable style={styles.nextpagediv}>
+        <Pressable style={styles.nextpagediv} onPress={() => naivgation.navigate('SettingScreen')}>
           <Text style={styles.textthree}>Settings</Text>
           <SmallRightArrowIcon/>
         </Pressable>
-        <Pressable style={styles.nextpagediv}>
+        <Pressable style={styles.nextpagediv} onPress={() => naivgation.navigate('ChangeWorkoutPlanScreen')}>
           <Text style={styles.textthree}>Change Workout Plan</Text>
           <SmallRightArrowIcon/>
         </Pressable>
@@ -36,9 +36,9 @@ const ProfileScreen = () => {
           <SmallRightArrowIcon/>
         </Pressable>
       </View>
-      <View style={styles.lastimg}>
+      <Pressable onPress={() => naivgation.navigate('CurrentPlanScreen')} style={styles.lastimg}>
         <ImageBackground source={ProfileScreenUpgradePlanImg} style={{width: '100%', height: 80}}/>
-      </View>
+      </Pressable>
     </View>
   )
 }
