@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   heightText: { fontSize: 22, color: "white", marginBottom: 20 },
-  tick: { width: 20, alignItems: "center" },
+  tick: { width: 40, alignItems: "center" },
   line: { width: 2, backgroundColor: "white" },
   indicator: {
     position: "absolute",
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HeightSliderCm;
+export default React.memo(HeightSliderCm);

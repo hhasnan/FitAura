@@ -41,6 +41,7 @@ const FocusAreaScreen = ({navigation}) => {
                 data={focusAreas}
                 renderItem={renderItems}
                 keyExtractor={(item) => item.id}
+                showsVerticalScrollIndicator={false}
             />
             <View style={styles.dummydiv}></View>
             <QuestionnaireButton style={styles.questionnaireButton} title={"Continue"} onPress={() => {focusArea === '' ? alert("Please select your focus area") :  (updateData('focusArea', focusArea), navigation.navigate('ActualGoalScreen'))}} />

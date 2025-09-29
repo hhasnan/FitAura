@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WeightRuler;
+export default React.memo(WeightRuler);

@@ -41,6 +41,7 @@ const ActualGoalScreen = ({navigation}) => {
                 data={ActualGoals}
                 renderItem={renderItems}
                 keyExtractor={(item) => item.id}
+                showsVerticalScrollIndicator={false}
             />
             <View style={styles.dummydiv}></View>
             <QuestionnaireButton style={styles.questionnaireButton} title={"Continue"} onPress={() => {actualGoal === '' ? alert("Please select your actual goal") :  (updateData('actualGoal', actualGoal), console.log(userData), navigation.navigate('WorkoutLevelScreen'))}} />

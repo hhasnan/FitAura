@@ -82,9 +82,10 @@ import ProfileScreenUpgradePlanImg from './profile-screen-upgrade-plan-img.png'
 import FAQScreenImg from './faq-screen-img.png'
 import DownArrowOrangeIcon from './down-arrow-icon.svg'
 import AboutUsScreenImg from './about-us-screen-img.png'
+import CongratulationIcon from './congratulation-icon.svg'
 
 export {
     SplashScreenDumbellIcon, SplashLoaderIcon, WelcomeScreenBgImg, OnBoarding1BgImg, OnBoarding2BgImg, OnBoarding3BgImg, AuthGoogleIcon, AuthAppleIcon, AuthfacebookIcon, EmailIcon, LockIcon, HidePasswordIcon, ProfileBarIcon, ForgotPasswordScreenIcon, OtpVerificationScreenIcon, PasswordResetScreenIcon, SuccessfullyResetScreenIcon, MaleGenderCardImg, FemaleGenderCardImg, AbsCardImg, ArmsCardImg, ChestCardImg, FullBodyCardImg, LegsCardImg, ShouldersCardImg, BuildMuscleImg, GainWeightImg, ImproveFlexibilityImg, ImproveOverallFitnessImg, IncreaseEnduranceImg, LoseWeightImg, BeginnerLevelImg, IntermediateLevelImg, AdvancedLevelImg, TickIcon, DemoCardImg, MasterCardLogoIcon, PlusIcon, EllipseLoaderIcon, GeneratingLoaderIcon, HomeBottombaricon, BellHomeIcon, HeartHomeIcon, CalendarHomeIcon, SubtitleHomeScreenIcon, LockSessionHomeScreenIcon, UnlockSessionHomeScreenIcon, HomeScreenCardImgOne, HomeScreenCardImgTwo, HomeScreenCardImgThree, NotificationScreenIcon, BackArrowIcon, SessionDetailsScreenBg, ClockSessionScreenIcon, FireSessionScreenIcon, HDumbellSessionScreenIcon, ShareButtonIcon, StartButtonIcon, DownArrowIcon, WeeklyWorkoutScreensImg, WeeklyWorkoutScreenPlayIcon, DayFourCardImg, LeftArrowIcon, PauseIcon, PlayIcon, PreviousArrowIcon, SkipArrowIcon, ReportBottomIcon,
     MiniClockWhiteIcon, ReportScreenPlayIcon, GoldMedalIcon, HistoryBottombarIcon, ProfileBottombarIcon, ReloadCardIcon, HeartWhiteIcon, DeleteWhiteIcon, SearchBarWhiteIcon, ProfileImg, NewProfileImgIcon, SmallRightArrowIcon, ProfileScreenUpgradePlanImg, FAQScreenImg,
-    DownArrowOrangeIcon, AboutUsScreenImg
+    DownArrowOrangeIcon, AboutUsScreenImg, CongratulationIcon
 }

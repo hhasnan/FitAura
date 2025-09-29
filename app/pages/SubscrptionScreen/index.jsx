@@ -31,7 +31,7 @@ const SubscriptionScreen = ({navigation}) => {
                 </Pressable>
             </View>
             <FeatureCard monthlyPlan={monthlyPlan} />
-            <QuestionnaireButton title={monthlyPlan ? 'Continue $4.99' : 'Continue $49.99'} onPress={() => { updateData('subscriptionPlan', monthlyPlan ? 'monthly' : 'yearly'); navigation.navigate('CardInformationScreen'); }} />
+            <QuestionnaireButton title={monthlyPlan ? 'Continue $4.99' : 'Continue $49.99'} onPress={() => { updateData('subscriptionPlan', monthlyPlan ? 'monthly' : 'yearly'); updateData('page', 1); navigation.navigate('CardInformationScreen'); }} />
         </View>
     )
 }

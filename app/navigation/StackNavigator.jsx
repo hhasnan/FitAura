@@ -35,6 +35,7 @@ import SettingScreen from "../pages/SettingScreen";
 import ChangeWorkoutPlanScreen from "../pages/ChangeWorkoutPlanScreen";
 import CurrentPlanScreen from "../pages/CurrentPlanScreen";
 import UpgradePlanScreen from "../pages/UpgradePlanScreen";
+import PlanUpdateSuccesfullyScreen from "../pages/PlanUpdateSuccesfullyScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -98,6 +99,7 @@ const StackNavigator = () => {
                 <Stack.Screen name="ChangeWorkoutPlanScreen" component={ChangeWorkoutPlanScreen} />
                 <Stack.Screen name="CurrentPlanScreen" component={CurrentPlanScreen} />
                 <Stack.Screen name="UpgradePlanScreen" component={UpgradePlanScreen} />
+                <Stack.Screen name="PlanUpdateSuccesfullyScreen" component={PlanUpdateSuccesfullyScreen} />
                 <Stack.Screen name="MainTabs" component={TabNavigator} />
             </Stack.Navigator>
         </AppProvider>

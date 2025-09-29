@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   weightText: { fontSize: 22, color: "white", marginBottom: 20 },
-  tick: { width: 13.33, alignItems: "center", justifyContent: "flex-end" },
+  tick: { width: 60, alignItems: "center", justifyContent: "flex-end" },
   line: { width: 2, backgroundColor: "white" },
   label: { color: "white", fontSize: 12, marginTop: 5 },
   indicator: {
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default WeightSliderLbs;
+export default React.memo(WeightSliderLbs);

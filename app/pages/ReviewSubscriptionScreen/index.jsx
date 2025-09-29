@@ -33,7 +33,7 @@ const ReviewSubscriptionScreen = ({ navigation }) => {
                     </View>
                     <View style={{ height: 90 }}><Text>dummy</Text></View>
                 </ScrollView>
-                <QuestionnaireButton title={'Continue'} onPress={() => navigation.navigate('GeneratingPlanScreen')} />
+                <QuestionnaireButton title={'Continue'} onPress={() => navigation.navigate(userData.aboutData.page === 1 ? 'GeneratingPlanScreen' : 'PlanUpdateSuccesfullyScreen')} />
             </View>
         </View>
     )

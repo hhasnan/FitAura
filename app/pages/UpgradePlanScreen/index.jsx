@@ -1,13 +1,15 @@
 import { Pressable, StatusBar, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import { BackArrowIcon, TickIcon } from '../../../assets/icons'
 import { useNavigation } from '@react-navigation/native'
 import FeatureCard from '../../components/FeatureCard'
 import QuestionnaireButton from '../../components/QuestionnaireButton'
+import { AppContext } from '../../Context/AppContext'
 
 const UpgradePlanScreen = () => {
     const navigation = useNavigation()
     const data = ['Ad-free experience', 'Unlimited goals: Set and manage an unlimited number of goals', 'Advanced habit and task tracking features', 'Customizable goal templates', 'Advanced AI-powered features', 'Priority customer support']
+    const { updateData } = useContext(AppContext)
 
     return (
         <View style={styles.container}>
@@ -36,7 +38,7 @@ const UpgradePlanScreen = () => {
                     ))}
                 </View>
             </View>
-            <QuestionnaireButton title={'Continue $49.99'} onPress={() => navigation.navigate('CardInformationScreen',{page: 2})} />
+            <QuestionnaireButton title={'Continue $49.99'} onPress={() => {updateData('page', 2); navigation.navigate('CardInformationScreen')}} />
         </View>
     )
 }

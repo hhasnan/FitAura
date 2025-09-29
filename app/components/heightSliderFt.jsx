@@ -70,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HeightSliderFtIn;
+export default React.memo(HeightSliderFtIn);

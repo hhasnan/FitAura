@@ -40,7 +40,7 @@ const NotificationScreen = () => {
                             <View style={styles.notifcation} key={index}>
                                 <View style={styles.notificationdiv}>
                                     <View style={styles.icondiv}>
-                                        {/* <NotificationScreenIcon/> */}
+                                        <NotificationScreenIcon/>
                                     </View>
                                     <View style={styles.notficationtextdata}>
                                         <View style={styles.toptext}>
@@ -99,7 +99,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15
     },
     scroll: {
-        flex: 1
+        flex: 1,
+        marginBottom: 60
     },
     icondiv: {
         width: 45,

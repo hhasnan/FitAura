@@ -39,7 +39,7 @@ const AgeRuler = ({age, setAge}) => {
 const styles = StyleSheet.create({
   container: { alignItems: "center", marginTop: 0, backgroundColor: "#202125", paddingVertical: 20, borderRadius: 10 },
   ageText: { fontSize: 22, color: "white", marginBottom: 20 },
-  tick: { width: 20, alignItems: "center" },
+  tick: { width: 35, alignItems: "center" },
   line: { width: 2, backgroundColor: "white" },
   indicator: {
     position: "absolute",

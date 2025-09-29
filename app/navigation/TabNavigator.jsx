@@ -25,6 +25,7 @@ const MyTabs = () => (
             tabBarIconStyle: {
                 marginTop: 'auto'
             }
+            
         }
         }>
         <Tab.Screen

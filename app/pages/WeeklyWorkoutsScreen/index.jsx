@@ -5,11 +5,11 @@ import { useNavigation } from '@react-navigation/native'
 
 
 const SimpleDay = ({ day }) => {
-
+    
     const navigation = useNavigation()
 
     return (
-        <View style={styles.workoutdaycard} key={day.id}>
+        <Pressable onPress={() => navigation.navigate('WorkoutDemoScreen')} style={styles.workoutdaycard}>
             <Image source={WeeklyWorkoutScreensImg} style={styles.cardimg} />
             <View style={styles.workoutdaycardtextcontainer}>
                 <Text style={styles.workoutdaycardtextone}>Strength Starter</Text>
@@ -19,10 +19,10 @@ const SimpleDay = ({ day }) => {
                     <Text style={styles.workoutdaycardtextthree}>15 Minutes</Text>
                 </View>
             </View>
-            <Pressable onPress={() => navigation.navigate('WorkoutDemoScreen')} style={styles.cardinconcontainer}>
+            <Pressable style={styles.cardinconcontainer}>
                 <WeeklyWorkoutScreenPlayIcon />
             </Pressable>
-        </View>
+        </Pressable>
     )
 }
 
@@ -39,6 +39,8 @@ const DayFour = ({ day }) => {
 
 
 const WeeklyWorkoutsScreen = () => {
+
+    const navigation = useNavigation()
 
     const data = [
         { id: 1, day: 'Day 1' },
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         paddingHorizontal: 20,
-        paddingTop: 20,
+        paddingTop: 40,
         paddingBottom: 5,
     },
     header: {

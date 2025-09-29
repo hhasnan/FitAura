@@ -15,6 +15,7 @@ export const AppProvider = ({ children }) => {
             height: '',
             subscriptionPlan: '',
             cardNumber: '',
+            page: null
         }
     });
 

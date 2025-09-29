@@ -1,14 +1,20 @@
 import { StatusBar, StyleSheet, Text, View } from 'react-native'
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { GeneratingLoaderIcon } from '../../../assets/icons'
+import { AnimatedCircularProgress } from 'react-native-circular-progress'
+import { useNavigation } from '@react-navigation/native'
 
 const GeneratingPlanScreen = ({ navigation }) => {
 
+    const circularRef = useRef(null)
 
     useEffect(() => {
+        const timer = setInterval(() => {
+            navigation.replace('MainTabs');
+        }, 9000);
         setInterval(() => {
-            navigation.navigate('MainTabs');
-        }, 5000);
+            clearInterval(timer)
+        }, 9500);
     }, [])
 
     return (
@@ -18,7 +24,24 @@ const GeneratingPlanScreen = ({ navigation }) => {
                 <Text style={styles.title}>Generating Your Workout Plan</Text>
                 <Text style={styles.subtitle}>Please wait....</Text>
             </View>
-            <GeneratingLoaderIcon style={styles.icon}/>
+            <AnimatedCircularProgress
+                ref={circularRef}
+                size={200}
+                width={8}
+                fill={100}
+                tintColor='#FE632B'
+                backgroundColor='#202125'
+                rotation={0}
+                lineCap='round'
+                duration={9000}
+                style={{marginVertical:157}}
+            >
+                {(fill) => (
+                    <Text style={styles.countertext}>
+                        {Math.round(fill)}%
+                    </Text>
+                )}
+            </AnimatedCircularProgress>
             <Text style={styles.belowsidetitle}>This will just take a moment to generating your workouts plan.</Text>
         </View>
     )
@@ -65,5 +88,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 'auto',
         marginBottom: 30
+    },
+    countertext: {
+        fontSize: 44,
+        fontWeight: 600,
+        color: '#fff',
+        fontFamily: 'Urbanist',
     }
 })

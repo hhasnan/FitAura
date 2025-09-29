@@ -38,7 +38,7 @@ const SignUp = ({ setLogin }) => {
                         fillColor="#FE632B"
                         unfillColor="#FFFFFF"
                         iconStyle={{ borderColor: "#FE632B" }}
-                        innerIconStyle={{ borderWidth: 2, borderRadius: 5, marginStart: 10 }}
+                        innerIconStyle={{ borderWidth: 2, borderRadius: 5, marginStart: 0 }}
                         textStyle={{ color: "white", fontSize: 13, fontFamily: "Urbanist"}}
                         onPress={() => setChecked(!checked)}
                     />

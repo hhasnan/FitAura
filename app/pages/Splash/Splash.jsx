@@ -1,21 +1,28 @@
-import { StatusBar, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { SplashLoaderIcon, SplashScreenDumbellIcon } from '../../../assets/icons'
+import { StatusBar, StyleSheet, Text, View, LogBox } from 'react-native'
+import React, { useEffect } from 'react'
+import { SplashScreenDumbellIcon } from '../../../assets/icons'
+import { DotIndicator } from 'react-native-indicators'
 
-
+// Suppress the specific warning
+LogBox.ignoreLogs([
+  'A props object containing a "key" prop is being spread into JSX',
+]);
 
 const Splash = () => {
 
+  useEffect(() => {
+    // You can add navigation timeout here if needed
+  }, []);
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor={'#FE632B'}></StatusBar>
+      <StatusBar backgroundColor={'#FE632B'} />
       <View style={styles.logocontainer}>
         <SplashScreenDumbellIcon />
         <Text style={styles.logoText}>FitAura</Text>
       </View>
       <View style={{ marginHorizontal: 'auto', marginBottom: 30 }}>
-        <SplashLoaderIcon  />
+        <DotIndicator color='#fff' size={7} />
       </View>
     </View>
   )
